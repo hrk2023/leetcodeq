@@ -27,3 +27,12 @@
 .Toastify__toast.toast-Incomplete .Toastify__progress-bar {
 	background: #aad0f6;
 }
+.container-custom{
+	padding-bottom: 100px;
+}
+.companies-icon{
+	display: flex;
+}
+.c-icon{
+	margin-right: 10px; 
+}

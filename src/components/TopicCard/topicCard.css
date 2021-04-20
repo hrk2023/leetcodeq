@@ -1,7 +1,3 @@
-.container-custom {
-	overflow-y: scroll;
-	height: 64vh;
-}
 .container::-webkit-scrollbar {
 	width: 5px; /* width of the entire scrollbar */
 }
@@ -57,16 +53,4 @@
 .hvr-grow:active {
 	-webkit-transform: scale(1.05);
 	transform: scale(1.05);
-}
-
-@media screen and (max-height: 650px) {
-	.container-custom {
-		height: 56vh;
-	}
-}
-
-@media screen and (max-height: 750px) {
-	.container-custom {
-		height: 54vh;
-	}
 }

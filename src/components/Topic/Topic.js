@@ -10,6 +10,27 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import "./Topic.css";
+import { 
+	FaAmazon,
+	FaFacebookSquare,
+	FaMicrosoft,
+	FaGoogle,
+	FaApple,
+	FaUber,
+	FaTwitter,
+	FaAirbnb,
+	FaPaypal,
+	FaEbay,
+	FaAdobe,
+	FaLinkedin,
+	FaSalesforce,
+	FaPinterest,
+	FaDropbox,
+	FaAd
+
+} from 'react-icons/fa'
+
+import {SiTesla, SiIbm, SiVmware} from 'react-icons/si'
 
 export default function Topic({ data, updateData }) {
 	/*
@@ -42,9 +63,45 @@ export default function Topic({ data, updateData }) {
 				return {
 					id: index,
 					question: (
+						<>
 						<a href={question.URL} target="_blank" rel="noopener noreferrer" style={{ fontWeight: "600" }}>
 							{question.Problem}
-						</a>
+						</a><br/>
+						<a href={question.Youtube} target="_blank" rel="noopener noreferrer"
+						style={{ fontWeight: "400"}}>
+							Solution
+						</a><br/><br/>
+						<p>
+							<div className="companies-icon">
+								{question.Amazon && <FaAmazon className="c-icon"/>}
+								{question.Google && <FaGoogle className="c-icon"/>}
+								{question.Facebook && <FaFacebookSquare className="c-icon"/>}
+								{question.Microsoft && <FaMicrosoft className="c-icon"/>}
+								{question.Apple && <FaApple className="c-icon"/>}
+								{question.Uber && <FaUber className="c-icon"/>}
+								{/* {question.Expedia && <img  /> */}
+								{question.Twitter && <FaTwitter className="c-icon"/>}
+								{/* {question.ByteDance && <img  /> */}
+								{question.Airbnb && <FaAirbnb className="c-icon"/>}
+								{question.Paypal && <FaPaypal className="c-icon"/>}
+								{/* {question.Bloomberg && <FaBloom /> */}
+								{/* {question.Oracle && <img  /> */}
+								{question.eBay && <FaEbay className="c-icon" attribute="Ebay"/>}
+								{/* {question.Snap && < /> */}
+								{question.Adobe && <FaAdobe className="c-icon"/>}
+								{question.LinkedIn && <FaLinkedin className="c-icon"/>}
+								{/* {question.Citedal && <img  /> */}
+								{question.Salesforce && <FaSalesforce className="c-icon"/>}
+								{/* {question.Robinhood && <img  /> */}
+								{question.Pinterest && <FaPinterest className="c-icon"/>}
+								{/* {question.Wish && <img  /> */}
+								{question.Tesla && <SiTesla className="c-icon"/>}
+								{question.IBM && <SiIbm className="c-icon"/>}
+								{question.Dropbox && <FaDropbox className="c-icon"/>}
+								{question.VMWare && <SiVmware className="c-icon"/>}
+							</div>
+						</p>
+						</>
 					),
 					_is_selected: question.Done,
 					_search_text: question.Problem,
