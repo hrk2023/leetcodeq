@@ -10,7 +10,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import "./Topic.css";
-import { 
+import{  
 	FaAmazon,
 	FaFacebookSquare,
 	FaMicrosoft,
@@ -48,7 +48,7 @@ export default function Topic({ data, updateData }) {
 
 	// updating states using useEffect with dependency  on `data` prop
 	useEffect(() => {
-		if (data !== undefined) {
+		if (data !== undefined){ 
 			let doneQuestion = [];
 			let tableData = data.questions.map((question, index) => {
 				if (question.Done) {
@@ -73,7 +73,7 @@ export default function Topic({ data, updateData }) {
 						</a><br/><br/>
 						<p>
 							<div className="companies-icon">
-								{question.Amazon && <FaAmazon className="c-icon"/>}
+                {question.Amazon && <FaAmazon className="c-icon"/>}
 								{question.Google && <FaGoogle className="c-icon"/>}
 								{question.Facebook && <FaFacebookSquare className="c-icon"/>}
 								{question.Microsoft && <FaMicrosoft className="c-icon"/>}
